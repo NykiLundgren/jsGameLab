@@ -11,8 +11,7 @@ while(true){
     let userHealth;
     let grantHealth;
     let grantDeath = 0;
-    let userWin = 0;
-
+    
     randomHitGenerator(40, 10);
 
     if(grantDeath === 3){
@@ -22,13 +21,11 @@ while(true){
 
     }else if(grantHealth === 0 && grantDeath < 3){
         grantHealth = 10;
-        userWin++;
         grantDeath++;
        
         console.log(name, " has ", userHealth, " health left. ");
         console.log("Grant the Mighty Chicken has ", grantHealth,
         " health left.");
-        console.log(name, " has ", userWin, " wins.");
         randomHitGenerator(userHealth, grantHealth);
     
     }else if(userHealth === 0 && grantDeath < 3){
