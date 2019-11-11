@@ -1,12 +1,14 @@
 //prompt to play
 confirm("Do you want to play a game?");
 let name = prompt("What is your name?");
-let userHealth;
-let grantHealth;
-let grantDeath = 0;
 
 //main game
-while(grantDeath < 3){
+while(true){
+
+    let userHealth;
+    let grantHealth;
+    let grantDeath = 0;
+    let userWin = 0;
 
     randomHitGenerator(40, 10);
 
