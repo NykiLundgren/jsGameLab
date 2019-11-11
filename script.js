@@ -1,7 +1,10 @@
 //prompt to play
 confirm("Do you want to play a game?");
 let name = prompt("What is your name?");
-
+/**
+ * turn based game between user and Grant the Mighty Chicken
+ * game ends when grant dies 3 times, or user health = 0
+ */
 //main game
 while(true){
 
@@ -17,7 +20,7 @@ while(true){
         " You defeated Grant the Mighty Chicken!");
         break;
 
-    }else if(grantHealth === 0 & grantDeath < 3){
+    }else if(grantHealth === 0 && grantDeath < 3){
         grantHealth = 10;
         userWin++;
         grantDeath++;
@@ -28,16 +31,16 @@ while(true){
         console.log(name, " has ", userWin, " wins.");
         randomHitGenerator(userHealth, grantHealth);
     
-    }else if(userHealth === 0 & grantDeath < 3){
+    }else if(userHealth === 0 && grantDeath < 3){
         console.log(name, " has ", userHealth,
         " points, Grant the Mighty Chicken wins.");
-        randomHitGenerator(userHealth, grantHealth);
+        break;
     
     }else{
-        randomHitGenerator(userHealth, grantHealth);
         console.log(name, " has ", userHealth, " health left. ");
         console.log("Grant the Mighty Chicken has ", grantHealth,
         " health left.");
+        randomHitGenerator(userHealth, grantHealth);
     
     }
     
